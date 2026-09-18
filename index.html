@@ -1,33 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lDestru | Portafolio</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #34495e; }
-        ul { line-height: 1.8; }
-        a { color: #3498db; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lDestru | Portafolio</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-bright: #f0f6fc;
+      --accent: #58a6ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 40px 20px; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; }
+    header { margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+    h1 { color: var(--text-bright); font-size: 2.2rem; margin-bottom: 8px; }
+    h2 { color: var(--accent); font-size: 1.2rem; font-weight: 500; margin-bottom: 15px; }
+    p.intro { font-size: 1.05rem; color: var(--text); }
+    .section-title { color: var(--text-bright); font-size: 1.4rem; margin: 30px 0 15px; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { background-color: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+    .card h3 { color: var(--text-bright); font-size: 1.1rem; margin-bottom: 8px; }
+    .card p { font-size: 0.95rem; margin-bottom: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { background: #21262d; border: 1px solid var(--border); color: var(--accent); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+    footer { margin-top: 50px; text-align: center; border-top: 1px solid var(--border); padding-top: 20px; font-size: 0.9rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hola, soy Miguel Posada</h1>
-        <h2>Desarrollador de Aplicaciones Informáticas | lDestru</h2>
-        <p>Bienvenido a mi portafolio. Me enfoco en la creación de soluciones de software, automatización y desarrollo web.</p>
-        
-        <h3>Proyectos Destacados:</h3>
-        <ul>
-            <li><strong>Automatización y Web Scraping:</strong> Desarrollo de scripts en Python utilizando BeautifulSoup y la API de Telegram para monitorear precios de componentes de hardware.</li>
-            <li><strong>Comercio Electrónico:</strong> Construcción de prototipos de tiendas online usando WordPress, WooCommerce y Elementor.</li>
-            <li><strong>Machine Learning:</strong> Exploración de visión artificial y modelos de clasificación de datos con TensorFlow.</li>
-        </ul>
-        
-        <p>Este portafolio está en construcción. Puedes ver parte de mi código en <a href="https://github.com/lDestru">mi perfil de GitHub</a>.</p>
+  <div class="container">
+    <header>
+      <h1>Miguel Posada</h1>
+      <h2>Desarrollo de Software & Soluciones Web | lDestru</h2>
+      <p class="intro">Enfocado en la creación de herramientas funcionales, automatización de procesos y desarrollo de aplicaciones eficientes.</p>
+    </header>
+
+    <h2 class="section-title">Proyectos Destacados</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Automatización & Web Scraping</h3>
+        <p>Scripts de extracción y monitoreo continuo de datos con alertas automáticas en tiempo real.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">BeautifulSoup</span>
+          <span class="tag">Telegram API</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Soluciones Web</h3>
+        <p>Estructuración e implementación de plataformas web optimizadas para carga rápida y usabilidad.</p>
+        <div class="tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">Web Design</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Machine Learning & Visión Artificial</h3>
+        <p>Exploración y entrenamiento de modelos de redes neuronales para clasificación y procesamiento de datos.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Computer Vision</span>
+        </div>
+      </div>
     </div>
+
+    <footer>
+      <p>Contacto y código en <a href="https://github.com/lDestru" target="_blank">GitHub (@lDestru)</a></p>
+    </footer>
+  </div>
 </body>
 </html>
